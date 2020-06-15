@@ -1,16 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import clock from './clock.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
 
 const App = () => {
-    const [seconds, setSeconds] = useState(0);
+    const [clocking, setClock] = useState(new Date().toLocaleTimeString());
 
     useEffect(() => {
-      const interval = setInterval(() => {
-        setSeconds(seconds => 
+      setInterval(() => {
+        setClock(clocking => 
           <div>
-            <h1>{new Date().toLocaleTimeString()}</h1>
+            {new Date().toLocaleTimeString()}
           </div>
         );
       }, 1000);
@@ -19,8 +19,9 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
+        <img src={clock} className="App-logo" alt="logo" />
         <h3>Clocking...</h3>
-        {seconds}
+        <h1>{clocking}</h1>
       </header>
     </div>
   );
