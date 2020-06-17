@@ -2,6 +2,9 @@ import React from 'react';
 import clock from './clock.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
+import Header from './component/Header';
+import Sidebar from './component/Sidebar';
+import ClockingTime from './component/ClokingTime';
 
 const App = () => {
     const [clocking, setClock] = useState(new Date().toLocaleTimeString());
@@ -18,11 +21,14 @@ const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <Header/>
+      <Sidebar/>
+      <div className="detail-view">
         <img src={clock} className="App-logo" alt="logo" />
         <h3>Clocking...</h3>
         <h1>{clocking}</h1>
-      </header>
+        <ClockingTime/>
+      </div>
     </div>
   );
 };

@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+.detail-view {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -26,6 +26,18 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.Menu{
+  align-items: center;
+  list-style: none;
+}
+
+.sidebar { float: left; padding-right: 30px;}
+
+.Menu li{
+  margin: 50px 0;
+  text-align: left;
 }
 
 @keyframes App-logo-spin {
