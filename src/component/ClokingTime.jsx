@@ -15,6 +15,7 @@ export default class ClockingTime extends React.Component{
     }
 
     render(){
+        // eslint-disable-next-line
         {setInterval(this.changingTime,1000)}
         return <div>
             Class-Function Timing : 

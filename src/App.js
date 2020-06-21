@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Header from './component/Header';
 import Sidebar from './component/Sidebar';
 import ClockingTime from './component/ClokingTime';
+import OnlyFunctionClocking from './component/OnlyFunctionClocking';
 
 const App = () => {
     const [clocking, setClock] = useState(new Date().toLocaleTimeString());
@@ -28,6 +29,7 @@ const App = () => {
         <h3>Clocking...</h3>
         <h1>{clocking}</h1>
         <ClockingTime/>
+        <OnlyFunctionClocking />
       </div>
     </div>
   );
